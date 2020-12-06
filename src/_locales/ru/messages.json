@@ -1,0 +1,44 @@
+{
+    "extensionName": {
+        "message": "Radio ROCKS"
+    },
+    "extensionDescription": {
+        "message": "Неофициальное расширение – онлайн радио."
+    },
+    "hoverIconTooltip": {
+        "message": "Radio ROCKS. Рок. Только рок!"
+    },
+    "goToWebsite": {
+        "message": "Перейти на сайт"
+    },
+    "playerButtonTitle": {
+        "message": "Проигрыватель"
+    },
+    "channelsButtonTitle": {
+        "message": "Каналы"
+    },
+    "bookmarksButtonTitle": {
+        "message": "Закладки"
+    },
+    "channelsTitle": {
+        "message": "Нажмите, чтобы активировать"
+    },
+    "channelsMainHeader": {
+        "message": "Ефир Radio Rocks"
+    },
+    "channelsUkrainianHeader": {
+        "message": "Украинский рок"
+    },
+    "channelsNewHeader": {
+        "message": "Новый рок"
+    },
+    "channelsHardHeader": {
+        "message": "Hard'nHeavy"
+    },
+    "channelsBalladsHeader": {
+        "message": "Рок-Баллады"
+    },
+    "channelsIndiHeader": {
+        "message": "Радио Інді.UA"
+    }
+}

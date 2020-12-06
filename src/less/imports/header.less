@@ -1,0 +1,84 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 0 10px;
+    &__logoWrap {
+        display: block;
+        width: 80px;
+    }
+}
+
+.radioRocksLogo {
+    &__path {
+        fill: var(--solidBrightColor);
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid var(--defaultBackgroundColor);
+        border-radius: 5px;
+        background-color: var(--solidDarkColor);
+        &:hover {
+            background-color: var(--brightTransparentColor);
+            svg path {
+                fill: var(--solidDarkColor);
+                stroke: var(--solidDarkColor);
+            }
+        }
+        &:active {
+            border: 1px solid var(--brightTransparentColor);
+            background-color: var(--accentBackgroundColor);
+            svg path {
+                fill: var(--solidDarkColor);
+                stroke: var(--solidDarkColor);
+            }
+        }
+        &.active {
+            border: 1px solid var(--brightTransparentColor);
+            background-color: var(--accentTransparentColor);
+            svg path {
+                fill: var(--solidDarkColor);
+                stroke: var(--solidDarkColor);
+            }
+        }
+        &.shake {
+            animation-duration: 0.5s;
+            animation-name: shakeIcon;
+        }
+    }
+}
+
+.playerNavIcon,
+.stationsNavIcon,
+.bookmarksNavIcon {
+    height: 20px;
+    &__path {
+        fill: var(--accentBackgroundColor);
+        stroke: var(--accentBackgroundColor);
+    }
+}
+
+@keyframes shakeIcon {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(45deg);
+        background-color: var(--brightTransparentColor);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

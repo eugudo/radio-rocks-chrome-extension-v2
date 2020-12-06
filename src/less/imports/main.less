@@ -1,0 +1,82 @@
+.main {
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.playerScreen {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    &.active {
+        display: flex;
+    }
+}
+
+.playStopButton {
+    display: block;
+    width: 100px;
+    margin: 0 auto 50px auto;
+    &:hover .playStopIcon {
+        fill: var(--brightTransparentColor);
+    }
+    &.playing {
+        & .playStopIcon .playStopIcon__play {
+            display: none;
+        }
+        & .playStopIcon .playStopIcon__stop {
+            display: block;
+        }
+    }
+}
+
+.playStopIcon {
+    fill: var(--accentBackgroundColor);
+    &__stop {
+        display: none;
+    }
+}
+
+.songInfo {
+    display: none;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    &.active {
+        display: grid;
+    }
+    &__singer {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__song {
+        font-size: 15px;
+    }
+    &__likeButton {
+        justify-self: center;
+        width: 30px;
+        &:hover path {
+            fill: var(--accentTransparentColor);
+        }
+        &.active {
+            & .rockHand__pathRockFist {
+                display: block;
+                fill: var(--accentBackgroundColor);
+            }
+            & .rockHand__pathFist {
+                display: none;
+            }
+        }
+    }
+}
+
+.rockHand {
+    min-width: 30px;
+    & > path {
+        fill: var(--brightTransparentColor);
+    }
+    &__pathRockFist {
+        display: none;
+    }
+}

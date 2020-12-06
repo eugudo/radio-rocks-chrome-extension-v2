@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 0;
+    &__controls {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.speakerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.speakerIcon {
+    min-width: 20px;
+    fill: var(--accentBackgroundColor);
+    &.min {
+        & .speakerIcon__max,
+        & .speakerIcon__medium {
+            display: none;
+        }
+    }
+    &.medium {
+        & .speakerIcon__max {
+            display: none;
+        }
+    }
+    &.muted {
+        fill: var(--solidBrightColor);
+        & .speakerIcon__max,
+        & .speakerIcon__medium,
+        & .speakerIcon__min {
+            display: none;
+        }
+    }
+}
+
+.volumeLevel {
+    max-width: 60px;
+    border: 0;
+}
+
+::-webkit-progress-value {
+    background-color: var(--accentBackgroundColor);
+}
+
+::-webkit-progress-bar {
+    background-color: var(--solidBrightColor);
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,57 @@
+.bookmarksScreen {
+    display: none;
+    width: 100%;
+    padding: 25px 0 0 15px;
+    &.active {
+        display: block;
+    }
+}
+
+.bookmarks {
+    &__item {
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        grid-template-areas:
+            'image singer'
+            'image song';
+        grid-template-columns: 70px 180px;
+        margin-bottom: 20px;
+        &:hover .bookmarks__itemDeleteButton,
+        &:hover .bookmarks__itemDeleteButton::before {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    &__itemImage {
+        grid-area: image;
+        width: 100%;
+        height: auto;
+    }
+    &__itemSinger {
+        grid-area: singer;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    &__itemSong {
+        grid-area: song;
+    }
+    &__itemDeleteButton,
+    &__itemDeleteButton::before {
+        position: absolute;
+        top: calc(50% - 2px);
+        right: 5px;
+        width: 15px;
+        height: 5px;
+        background-color: var(--warningColor);
+        opacity: 0;
+        transform: rotate(45deg);
+    }
+    &__itemDeleteButton::before {
+        content: '';
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
+    }
+}

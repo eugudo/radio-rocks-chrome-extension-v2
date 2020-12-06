@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",
+      "noImplicitAny": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "strictNullChecks": true,
+      "removeComments": true,
+      "strictFunctionTypes": false,
+    }
+  }

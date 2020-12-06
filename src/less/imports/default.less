@@ -1,0 +1,59 @@
+:root {
+    --defaultTextColor: #f3c309;
+    --defaultBackgroundColor: #494949;
+    --accentBackgroundColor: #e7bd13;
+    --solidDarkColor: #2a2a2a;
+    --solidBrightColor: #ffffff;
+    --brightTransparentColor: rgba(255, 255, 255, 0.7);
+    --accentTransparentColor: rgba(255, 204, 0, 0.8);
+    --darkTransparentColor: rgba(42, 42, 42, 0.774);
+    --warningColor: #be2d2d;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 320px;
+    height: 500px;
+    padding: 15px;
+    font: 400 15px/1 'Fira Sans Condensed', Arial, sans-serif;
+    color: var(--defaultTextColor);
+    background: url(../../img/background.webp) no-repeat, var(--defaultBackgroundColor);
+    background-size: cover;
+    background-position: center;
+}
+
+button {
+    border: 0;
+    background: none;
+    outline: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--accentBackgroundColor);
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px var(--defaultBackgroundColor);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px var(--accentBackgroundColor);
+}
+
+// * { outline: 1px solid rgba(255,0,0,.2); :hover { outline: 1px solid rgba(255,0,0,0.6); } }
+// * * { outline: 1px solid rgba(0,255,0,.2); :hover { outline: 1px solid rgba(0,255,0,0.6); } }
+// * * * { outline: 1px solid rgba(0,0,255,.2); :hover { outline: 1px solid rgba(0,0,255,0.6); } }
+// * * * * { outline: 1px solid rgba(255,0,255,.2); :hover { outline: 1px solid rgba(255,0,0,0.6); } }
+// * * * * * { outline: 1px solid rgba(0,255,255,.2); :hover { outline: 1px solid rgba(0,255,0,0.6); } }
+// * * * * * * { outline: 1px solid rgba(255,255,0,.2); :hover { outline: 1px solid rgba(0,0,255,0.6); } }
+// * * * * * * * { outline: 1px solid rgba(255,0,0,.2); :hover { outline: 1px solid rgba(255,0,0,0.6); } }
+// * * * * * * * * { outline: 1px solid rgba(0,255,0,.2); :hover { outline: 1px solid rgba(0,255,0,0.6); } }
+// * * * * * * * * * { outline: 1px solid rgba(0,0,255,.2); :hover { outline: 1px solid rgba(0,0,255,0.6); } }
