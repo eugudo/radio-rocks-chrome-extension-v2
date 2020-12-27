@@ -15,7 +15,7 @@ export class ContentManager extends BaseUi {
         this.setPlayStopButtonStatus();
         this.setChannelsList();
         this.setHeaderTitles();
-        this.setVolumelevel();
+        this.setVolumeLevel();
         this.setFooterChannelTitle();
         this.setBookmarks();
     }
@@ -40,7 +40,7 @@ export class ContentManager extends BaseUi {
         });
     }
 
-    private setVolumelevel(): void {
+    private setVolumeLevel(): void {
         const volumeElem = document.querySelector('.volumeLevel')!;
         const volumeLevelPromise = this.getChromeStorageData<VolumeLevel>(Settings.VolumeLevel);
         volumeLevelPromise.then((response) => {

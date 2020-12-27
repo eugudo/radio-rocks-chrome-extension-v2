@@ -29,7 +29,8 @@ export class ChannelInfoUpdater {
                 const currentInfo = channelInfo[0];
                 if (lastActiveChannel.channelName !== chrome.i18n.getMessage('channelsIndiHeader')) {
                     const artistId = (currentInfo as FullChannelInfoDTO).artist_id;
-                    if (artistId === 0) {
+                    const singerName = (currentInfo as FullChannelInfoDTO).singer;
+                    if (artistId === 0 && singerName === 'Radio ROKS') {
                         this.state.channelInfo.currentTime = null;
                         return;
                     }

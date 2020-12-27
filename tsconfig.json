@@ -9,5 +9,6 @@
       "strictNullChecks": true,
       "removeComments": true,
       "strictFunctionTypes": false,
+      "moduleResolution": "node"
     }
   }
