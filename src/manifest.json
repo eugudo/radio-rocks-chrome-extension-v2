@@ -24,10 +24,7 @@
     },
     "permissions": [
         "background",
-        "storage",
-        "clipboardRead",
-        "notifications",
-        "http://*/*"
+        "storage"
     ],
     "background": {
         "page": "background.html"
