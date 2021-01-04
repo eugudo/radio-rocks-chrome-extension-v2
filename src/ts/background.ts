@@ -13,6 +13,7 @@ import { ChannelInfoUpdater } from './backgroundPage/ChannelInfoUpdater';
 document.addEventListener('DOMContentLoaded', () => initializeBackgroundPage());
 
 const initializeBackgroundPage = (): void => {
+    const newestVersion = chrome.runtime.getManifest().version === '1.0.2';
     appState.player.setBudgeDisplay();
     const channelsListPromise = getChromeStorageData<Channel[]>(Settings.ChannelsList);
     const bookmarksListPromise = getChromeStorageData<Bookmark[]>(Settings.BookmarksList);
@@ -20,7 +21,7 @@ const initializeBackgroundPage = (): void => {
     const volumeLevelPromise = getChromeStorageData<VolumeLevel>(Settings.VolumeLevel);
     Promise.all([channelsListPromise, bookmarksListPromise, lastActiveChannelPromise, volumeLevelPromise]).then(
         (values) => {
-            if (!values[0]) {
+            if (!values[0] || newestVersion) {
                 setChromeStorageData({ [Settings.ChannelsList]: channelsList });
             }
             if (!values[1]) {
