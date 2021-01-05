@@ -63,3 +63,7 @@ export interface FullChannelInfoDTO extends BaseChannelInfoDTO {
     video: string;
     year?: null;
 }
+
+export type AppVersion = {
+    version: string;
+}
